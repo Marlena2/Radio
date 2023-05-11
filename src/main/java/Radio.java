@@ -1,6 +1,6 @@
 public class Radio {
-    private int currentStation = 0;
-    private int currentVolume = 0;
+    private int currentStation;
+    private int currentVolume;
 
     public void next() {
         if (currentStation != 9) {
@@ -26,8 +26,9 @@ public class Radio {
         }
     }
 
+
     public void reduceVolume() {
-        if (currentVolume <= 10) {
+        if (currentVolume > 0 && currentVolume <= 10) {
             currentVolume = currentVolume - 1;
         } else {
             currentVolume = 0;
