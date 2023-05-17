@@ -162,7 +162,7 @@ public class RadioTest {
 
         radio.setCurrentVolume(0);
 
-   //     radio.reduceVolume();
+        radio.reduceVolume();
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
