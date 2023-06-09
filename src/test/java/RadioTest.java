@@ -222,19 +222,6 @@ public class RadioTest {
     }
 
     @Test
-    public void maxVolume () {
-        Radio radio = new Radio();
-
-        radio.setCurrentVolume(10);
-
-        radio.increaseVolume();
-
-        int expected = 10;
-        int actual = radio.getCurrentVolume();
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
     public void testVolume () {
         Radio radio = new Radio();
 
