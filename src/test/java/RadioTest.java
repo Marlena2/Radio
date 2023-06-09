@@ -134,11 +134,11 @@ public class RadioTest {
     public void increaseVolume () {
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(3);
+        radio.setCurrentVolume(55);
 
         radio.increaseVolume();
 
-        int expected = 4;
+        int expected = 56;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -147,11 +147,11 @@ public class RadioTest {
     public void reduceVolume () {
         Radio radio = new Radio();
 
-        radio.setCurrentVolume(7);
+        radio.setCurrentVolume(72);
 
         radio.reduceVolume();
 
-        int expected = 6;
+        int expected = 71;
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
@@ -208,18 +208,6 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void highBorderVolume () {
-        Radio radio = new Radio();
-
-        radio.setCurrentVolume(9);
-
-        radio.reduceVolume();
-
-        int expected = 8;
-        int actual = radio.getCurrentVolume();
-        Assertions.assertEquals(expected, actual);
-    }
 
     @Test
     public void testVolume () {
